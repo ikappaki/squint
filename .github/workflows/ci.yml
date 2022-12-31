@@ -24,7 +24,7 @@ jobs:
         java-version: 11
 
     - name: "Restore Cache"
-      uses: "actions/cache@3"
+      uses: "actions/cache@v3"
       with:
         path: "~/.m2/repository"
         key: "${{ runner.os }}-deps-${{ hashFiles('deps.edn') }}"
