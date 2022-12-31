@@ -23,12 +23,12 @@ jobs:
         distribution: "adopt"
         java-version: 11
 
-    - name: "Restore Cache"
-      uses: "actions/cache@v1"
-      with:
-        path: "~/.m2/repository"
-        key: "${{ runner.os }}-deps-${{ hashFiles('deps.edn') }}"
-        restore-keys: "${{ runner.os }}-deps-"
+    # - name: "Restore Cache"
+    #   uses: "actions/cache@v1"
+    #   with:
+    #     path: "~/.m2/repository"
+    #     key: "${{ runner.os }}-deps-${{ hashFiles('deps.edn') }}"
+    #     restore-keys: "${{ runner.os }}-deps-"
 
     - name: Setup Clojure
       uses: DeLaGuardo/setup-clojure@9.3
